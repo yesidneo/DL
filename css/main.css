@@ -1,0 +1,302 @@
+
+
+body{
+    background-color: white;
+    
+    
+    
+       
+}
+
+/*HEADER*/
+
+
+
+
+/*brand*/
+.container{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+header{
+    background-color:rgba(3, 3, 3, 0.938);
+    color:grey;
+    padding: 1em 0;
+    position: relative;
+
+    
+}
+
+header::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+@font-face {
+    font-family: 'SevigneST-Regular';
+    src: url(../fonts/Reserves\ -\ SevigneST-Regular.otf);}
+    @font-face {
+        font-family: 'lowvetica';
+        src: url(../fonts/Lowvetica.ttf);}
+        @font-face {
+            font-family: 'kelvetica';
+            src: url(../fonts/Kelvetica.ttf);}
+        
+    
+
+.clogo{
+    width: 200px;
+    padding-left: 20px;
+    display: block;
+    color: rgb(56, 172, 11);
+    padding-top: 20px;
+
+    
+}
+             
+.logo{
+
+    font-family: 'SevigneST-Regular';
+        font-size:15px;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        
+    
+        
+    
+   
+}
+
+
+/*menu collapse*/
+
+.site_nav{
+    top: 100%;
+    right: 0;
+    position: absolute;
+    background: rgba(7, 7, 7, 0.808);
+    -webkit-clip-path: circle(0px at top right);
+    -moz-clip-path: circle(0px at top right);
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+    
+}
+
+.site-nav-open{
+    -webkit-clip-path: circle(150% at top right);
+    -moz-clip-path: circle(150% at top right);
+    clip-path: circle(150% at top right);
+     
+}
+
+.site_nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.site_nav li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+}
+
+/*icons*/
+.fa-home:before {
+    font-size: 16px;
+}
+.fa-info:before {
+    font-size: 16px;
+}
+.fa-pencil-alt:before {
+    font-size: 16px;
+}
+.fa-envelope:before {
+    font-size: 16px;
+}
+
+.site_nav a{
+    color: rgba(255, 255, 255, 0.849);
+    display: block;
+    padding: 1em 4em;
+    text-decoration: none;
+    font-family: 'lowvetica';
+    font-size: 17px;
+         
+}
+  
+.site_nav a:hover,
+.site_nav a:focus{
+    background: grey;
+    color: black;
+}
+
+
+/*Burguer*/
+/*icons*/
+.site-nav--icon{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color:rgba(151, 150, 150, 0.842);
+
+}
+
+.menu-toggle{
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    
+}
+
+.menu-open .burguer{
+    transform: rotate(45deg);
+
+}
+.menu-open .burguer::before{
+    opacity: 0;
+}
+.menu-open .burguer::after{
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+.burguer,
+.burguer::before,
+.burguer::after {
+
+    content: '';
+    display: block;
+    background: rgba(255, 255, 255, 0.849);
+    height: 3px;
+    width: 1.6em;
+    border-radius: 3px;
+}
+
+.burguer::before{
+    transform: translateY(-6px);
+}
+
+.burguer::after{
+    transform: translateY(3px);
+}
+
+
+
+/*Headrrom*/
+
+.headroom--pinned{
+    transform: translateY(0);
+
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+    
+
+}
+
+.header--fixed{
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease 0%;
+
+}
+
+/*SECTION*/
+
+.container3{
+    margin: 0;
+    margin: auto;
+    margin-top: 70px;
+    width: 90%;
+    border: 10px solid black;
+    
+}
+
+.container3 > div{
+    display: block;
+    background: blue;
+    padding: 20px;
+    color: aqua;
+    box-shadow: 2px 2px 10px black;
+
+}
+ 
+
+/*MEDIA QUERYS*/
+
+
+
+
+ 
+
+@media  (min-width:768px){
+
+    .menu-toggle{
+         display: none;
+    }
+
+
+
+
+
+    .site_nav{
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 10px; 
+        -webkit-clip-path: initial;
+        -moz-clip-path: initial; 
+        clip-path: initial;
+ 
+    }
+
+
+    .site_nav li{
+        display: inline-block;
+        border: none;
+        
+        
+
+
+        
+    }
+
+    .site_nav a{
+       
+        padding-top: 10px; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+        padding-bottom: 10px; 
+        
+        
+        margin-left: 40px;
+        margin-top: 0px;
+        font-size: 15px;
+
+    }
+    
+    .site-nav--icon{
+        display: none;
+
+    }
+   
+    .site-nav a:hover,
+    .site-nav a:focus{
+        background: transparent;
+
+    }
+   
+} 
+
+ /**/

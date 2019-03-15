@@ -1,0 +1,4 @@
+.container3 {
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
